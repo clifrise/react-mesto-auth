@@ -1,0 +1,9 @@
+.popup__container_theme_edit-form {
+  min-width: 430px;
+}
+
+@media screen and (max-width: 588px) {
+  .popup__container_theme_edit-form{
+    min-width: initial;
+  }
+}

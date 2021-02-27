@@ -1,0 +1,9 @@
+.form__item-error {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.25;
+  max-width: 358px;
+  min-height: 28px;
+  display: block;
+}

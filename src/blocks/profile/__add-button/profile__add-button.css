@@ -1,0 +1,26 @@
+.profile__add-button {
+  background-color: transparent;
+  min-width: 150px;
+  min-height: 50px;
+  box-sizing: border-box;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  background: url('../../../images/plus.svg') no-repeat center center;
+  margin-left: auto;
+}
+
+.profile__add-button:hover {
+  opacity: .6;
+  cursor: pointer;
+}
+
+.profile__add-button:focus {
+  outline: none;
+}
+
+@media screen and (max-width: 686px) {
+  .profile__add-button {
+    margin-left: initial;
+    width: 100%;
+  }
+}
