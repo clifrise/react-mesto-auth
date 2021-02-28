@@ -1,6 +1,6 @@
 {
-  "homepage": "https://clifrise.github.io/mesto-react",
-  "name": "mesto-react",
+  "homepage": "https://github.com/clifrise/react-mesto-auth",
+  "name": "mesto-react-auth",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
