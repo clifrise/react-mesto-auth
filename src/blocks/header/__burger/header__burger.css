@@ -6,5 +6,7 @@
   .header__burger {
     order: 3;
     margin-right: 30px;
+    background: none;
+    border: none;
   }
 }

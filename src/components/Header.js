@@ -43,8 +43,8 @@ function Header({email, isLogged, onLogout}) {
         </ul>
       </nav>
       <Route path="/cards">
-        <img src={burgerOpenImg} className={burgerOpen} alt="Бургер" onClick={handleMenuClick} />
-        <img src={burgerCloseImg} className={burgerClose} alt="Бургер" onClick={handleMenuClick} />
+        <button className={burgerOpen} onClick={handleMenuClick}><img src={burgerOpenImg} alt="Бургер" /></button>
+        <button className={burgerClose} onClick={handleMenuClick}><img src={burgerCloseImg} alt="Бургер" /></button>
       </Route>
     </header>
   );
