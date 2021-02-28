@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/clifrise/react-mesto-auth/static/css/main.e0975fbc.chunk.css",
-    "main.js": "/clifrise/react-mesto-auth/static/js/main.350889ed.chunk.js",
-    "main.js.map": "/clifrise/react-mesto-auth/static/js/main.350889ed.chunk.js.map",
-    "runtime-main.js": "/clifrise/react-mesto-auth/static/js/runtime-main.7b578437.js",
-    "runtime-main.js.map": "/clifrise/react-mesto-auth/static/js/runtime-main.7b578437.js.map",
-    "static/js/2.8acfff3a.chunk.js": "/clifrise/react-mesto-auth/static/js/2.8acfff3a.chunk.js",
-    "static/js/2.8acfff3a.chunk.js.map": "/clifrise/react-mesto-auth/static/js/2.8acfff3a.chunk.js.map",
-    "static/js/3.7e1af6c6.chunk.js": "/clifrise/react-mesto-auth/static/js/3.7e1af6c6.chunk.js",
-    "static/js/3.7e1af6c6.chunk.js.map": "/clifrise/react-mesto-auth/static/js/3.7e1af6c6.chunk.js.map",
-    "index.html": "/clifrise/react-mesto-auth/index.html",
-    "static/css/main.e0975fbc.chunk.css.map": "/clifrise/react-mesto-auth/static/css/main.e0975fbc.chunk.css.map",
-    "static/js/2.8acfff3a.chunk.js.LICENSE.txt": "/clifrise/react-mesto-auth/static/js/2.8acfff3a.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/clifrise/react-mesto-auth/static/media/plus.d86bb2ed.svg",
-    "static/media/burger.a46d5c1c.svg": "/clifrise/react-mesto-auth/static/media/burger.a46d5c1c.svg",
-    "static/media/close_burger.3c2485ff.svg": "/clifrise/react-mesto-auth/static/media/close_burger.3c2485ff.svg",
-    "static/media/success_false.df8eddf6.svg": "/clifrise/react-mesto-auth/static/media/success_false.df8eddf6.svg",
-    "static/media/success_true.1b6082f8.svg": "/clifrise/react-mesto-auth/static/media/success_true.1b6082f8.svg"
+    "main.css": "./static/css/main.14600df6.chunk.css",
+    "main.js": "./static/js/main.eda2cdef.chunk.js",
+    "main.js.map": "./static/js/main.eda2cdef.chunk.js.map",
+    "runtime-main.js": "./static/js/runtime-main.37c7b767.js",
+    "runtime-main.js.map": "./static/js/runtime-main.37c7b767.js.map",
+    "static/js/2.528a4471.chunk.js": "./static/js/2.528a4471.chunk.js",
+    "static/js/2.528a4471.chunk.js.map": "./static/js/2.528a4471.chunk.js.map",
+    "static/js/3.7e1af6c6.chunk.js": "./static/js/3.7e1af6c6.chunk.js",
+    "static/js/3.7e1af6c6.chunk.js.map": "./static/js/3.7e1af6c6.chunk.js.map",
+    "index.html": "./index.html",
+    "static/css/main.14600df6.chunk.css.map": "./static/css/main.14600df6.chunk.css.map",
+    "static/js/2.528a4471.chunk.js.LICENSE.txt": "./static/js/2.528a4471.chunk.js.LICENSE.txt",
+    "static/media/index.css": "./static/media/plus.d86bb2ed.svg",
+    "static/media/burger.a46d5c1c.svg": "./static/media/burger.a46d5c1c.svg",
+    "static/media/close_burger.3c2485ff.svg": "./static/media/close_burger.3c2485ff.svg",
+    "static/media/success_false.df8eddf6.svg": "./static/media/success_false.df8eddf6.svg",
+    "static/media/success_true.1b6082f8.svg": "./static/media/success_true.1b6082f8.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.7b578437.js",
-    "static/js/2.8acfff3a.chunk.js",
-    "static/css/main.e0975fbc.chunk.css",
-    "static/js/main.350889ed.chunk.js"
+    "static/js/runtime-main.37c7b767.js",
+    "static/js/2.528a4471.chunk.js",
+    "static/css/main.14600df6.chunk.css",
+    "static/js/main.eda2cdef.chunk.js"
   ]
 }
