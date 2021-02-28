@@ -1,0 +1,16 @@
+.form__item_theme_dark {
+  color: #ccc;
+  background-color: #000;
+  border-bottom: 2px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.form__item_theme_dark:last-of-type {
+  margin-bottom: 216px;
+}
+
+@media screen and (max-width: 686px) {
+  .form__item_theme_dark:last-of-type {
+    margin-bottom: 173px;
+  } 
+}

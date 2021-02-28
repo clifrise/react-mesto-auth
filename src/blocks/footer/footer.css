@@ -1,5 +1,11 @@
+.footer {
+  position: absolute;
+  bottom: 60px;
+}
+
 @media screen and (max-width: 686px) {
   .footer {
     padding: 0 19px;
+    bottom: 14px;
   }
 }

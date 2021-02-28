@@ -1,17 +1,16 @@
 .header__logo {
+  display: block;
   background-size: cover;
-  min-width: 142px;
-}
-
-@media screen and (max-width: 882px) {
-  .header__logo {
-    margin-left: 27px;
-  }
+  width: 146px;
+  height: 34px;
+  background-image: url('../../../images/logo.svg');
 }
 
 @media screen and (max-width: 686px) {
   .header__logo {
     width: 103px;
-    height: 24px;    
+    height: 24px;
+    background-image: url('../../../images/logo.svg');
+    margin-left: 30px;
   }
 }
