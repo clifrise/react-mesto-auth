@@ -90,8 +90,8 @@ function App() {
 
   useEffect(() => {
     api.getInitialCards()
-      .then((initialCards) => {
-        setCards(initialCards);
+      .then((initialCards) => {        
+        setCards(initialCards.data);
       })
       .catch((err) => {
         console.log(err);
@@ -103,7 +103,7 @@ function App() {
     const likeRequest = !isLiked ? api.addLike(card._id) : api.removeLike(card._id);
     likeRequest
       .then((newCard) => {
-        const newCards = cards.map((c) => c._id === card._id ? newCard : c);
+        const newCards = cards.map((c) => c._id === card._id ? newCard.data : c);
         setCards(newCards);
       }).catch((err) => {
         console.log(err);
@@ -123,7 +123,7 @@ function App() {
   useEffect(() => {
     api.getUserInfo()
       .then((initialUser) => {
-        setCurrentUser(initialUser);
+        setCurrentUser(initialUser.data);
       })
       .catch((err) => {
         console.log(err);
@@ -158,7 +158,7 @@ function App() {
   function handleUpdateUser(userData) {
     api.setUserProfile(userData.name, userData.about)
     .then((newUser) => {      
-      setCurrentUser(newUser);
+      setCurrentUser(newUser.data);
       closeAllPopups();
     })
     .catch((err) => {
@@ -169,7 +169,7 @@ function App() {
   function handleUpdateAvatar(link) {
     api.setAvatar(link.avatar)
     .then((newUser) => {      
-      setCurrentUser(newUser);
+      setCurrentUser(newUser.data);
       closeAllPopups();
     })
     .catch((err) => {
@@ -180,7 +180,7 @@ function App() {
   function handleAddPlace(cardData) {
     api.addCard(cardData.name, cardData.link)
     .then((newCard) => {      
-      setCards([newCard, ...cards]);
+      setCards([newCard.data, ...cards]);
       closeAllPopups();
     })
     .catch((err) => {

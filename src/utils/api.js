@@ -16,7 +16,10 @@ class Api {
     const url = this._baseUrl+'/users/me';
     return fetch(url, {
       method: 'GET',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     })
     .then(res => {
       return this._checkStatus(res);
@@ -27,7 +30,10 @@ class Api {
     const url = this._baseUrl+'/cards';
     return fetch(url, {
       method: 'GET',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     })
     .then(res => {
       return this._checkStatus(res);
@@ -38,7 +44,10 @@ class Api {
     const url = this._baseUrl+'/users/me';
     return fetch(url, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name: name,
         about: status,
@@ -53,7 +62,10 @@ class Api {
     const url = this._baseUrl+'/cards';
     return fetch(url, {
       method: 'POST',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         name: name,
         link: link,
@@ -68,7 +80,10 @@ class Api {
     const url = `${this._baseUrl}/cards/${cardId}`;
     return fetch(url, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
     })
     .then(res => {
       return this._checkStatus(res);
@@ -76,10 +91,13 @@ class Api {
   }
 
   addLike(cardId) {
-    const url = `${this._baseUrl}/cards/likes/${cardId}`;
+    const url = `${this._baseUrl}/cards/${cardId}/likes`;
     return fetch(url, {
       method: 'PUT',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     })
     .then(res => {
       return this._checkStatus(res);
@@ -87,10 +105,13 @@ class Api {
   }
 
   removeLike(cardId) {
-    const url = `${this._baseUrl}/cards/likes/${cardId}`;
+    const url = `${this._baseUrl}/cards/${cardId}/likes`;
     return fetch(url, {
       method: 'DELETE',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      }
     })
     .then(res => {
       return this._checkStatus(res);
@@ -101,7 +122,10 @@ class Api {
     const url = this._baseUrl+'/users/me/avatar';
     return fetch(url, {
       method: 'PATCH',
-      headers: this._headers,
+      headers: {
+        authorization: `Bearer ${localStorage.getItem('jwt')}`,
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
         avatar: link,
       }),
@@ -113,11 +137,7 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: BASE_URL,
-  headers: {
-    authorization: localStorage.getItem('jwt'),
-    'Content-Type': 'application/json'
-  }
+  baseUrl: BASE_URL  
 });
 
 export default api;

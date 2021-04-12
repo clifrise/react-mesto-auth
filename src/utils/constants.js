@@ -1,1 +1,1 @@
-export const BASE_URL = 'https://api.ruslanbelyi.students.nomoredomains.icu/';
+export const BASE_URL = 'http://localhost:3000';
