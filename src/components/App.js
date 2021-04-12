@@ -30,6 +30,7 @@ function App() {
   const [selectedCard, setSelectedCard] = useState(null);
   const [currentUser, setCurrentUser] = useState({});
   const [cards, setCards] = useState([]);
+  const [dataLoaded, setDataLoaded] = useState(false);
 
   const history = useHistory();
 
@@ -60,6 +61,7 @@ function App() {
           setLoggedIn(true);
           localStorage.setItem('jwt', res.token);
           history.push('/cards');
+          return res;
         };
       })
       .catch(res => {
@@ -89,14 +91,16 @@ function App() {
   }
 
   useEffect(() => {
-    api.getInitialCards()
+    if (loggedIn) {
+      api.getInitialCards()
       .then((initialCards) => {        
         setCards(initialCards.data);
       })
       .catch((err) => {
         console.log(err);
       });
-  }, []);
+    }    
+  }, [loggedIn]);
 
   function handleCardLike(card) {
     const isLiked = card.likes.some(i => i._id === currentUser._id);
@@ -121,15 +125,18 @@ function App() {
   }
 
   useEffect(() => {
-    api.getUserInfo()
+    if (loggedIn) {
+      api.getUserInfo()
       .then((initialUser) => {
         setCurrentUser(initialUser.data);
+        setDataLoaded(true);
       })
       .catch((err) => {
         console.log(err);
       });
+    }    
 
-  }, []);
+  }, [loggedIn]);
        
   function handleEditProfileClick(event) {
     setEditProfilePopupOpen(true);
@@ -210,7 +217,8 @@ function App() {
               onCardClick={handleCardClick} 
               cards={cards} 
               handleCardLike={handleCardLike} 
-              handleCardDelete={handleCardDelete}>              
+              handleCardDelete={handleCardDelete}
+              dataLoaded={dataLoaded}>             
             </ProtectedRoute>
             <Route>
               {loggedIn ? <Redirect to="/cards" /> : <Redirect to="/sign-in" />}

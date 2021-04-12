@@ -9,7 +9,7 @@ function Main(props) {
   return (
     <main className="main page__main">
       <section className="profile main__profile">
-        <div className="profile__avatar" onClick={props.onEditAvatar} style={{ backgroundImage: `url(${currentUser.avatar})` }} >
+        <div className="profile__avatar" onClick={props.onEditAvatar} style={ { backgroundImage: props.dataLoaded ? `url(${currentUser.avatar})` : 'none' } } >
           <div className="profile__overlay"></div>
         </div>
         <div className="profile__info">
