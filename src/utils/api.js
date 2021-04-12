@@ -1,3 +1,4 @@
+import { BASE_URL } from './constants';
 class Api {
   constructor({ baseUrl, headers }) {
     this._baseUrl = baseUrl;
@@ -112,9 +113,9 @@ class Api {
 }
 
 const api = new Api({
-  baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-19',
+  baseUrl: BASE_URL,
   headers: {
-    authorization: '3cf94fea-bd08-4b5d-9ccb-283ecc1d9d83',
+    authorization: localStorage.getItem('jwt'),
     'Content-Type': 'application/json'
   }
 });
